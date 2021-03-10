@@ -1,15 +1,23 @@
-
 exports.min = function min (array) {
-  const arrMin = arr => Math.min(...arr);
-  return arrMin;
+	if (array == null && array.length == 0) {
+		return 0;
+	} else {
+	return Math.min.apply(null, array);
+	}
 }
 
 exports.max = function max (array) {
-  const arrMax = arr => Math.max(...arr);
-  return arrMax;
+	if (array == null && array.length == 0) {
+		return 0;
+	} else {
+	return Math.max.apply(null, array);
+	}
 }
 
 exports.avg = function avg (array) {
-  const arrAvg = arr => arr.reduce((a,b) => a + b, 0) / arr.length;
-  return arrAvg;
+	if (array == null && array.length == 0) {
+		return 0;
+	} else {
+	return array.reduce((a, b) => (a + b)) / array.length;
+	}
 }
